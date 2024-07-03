@@ -1,0 +1,9 @@
+.icones {
+    display: flex;
+    padding-top: 17px;
+  }
+  
+  .icone {
+    margin-right: 40px;
+    align-items: center;
+  }
