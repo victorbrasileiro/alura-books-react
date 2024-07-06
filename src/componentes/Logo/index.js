@@ -5,7 +5,8 @@ const LogoContainer = styled.div`
     display: flex;
     font-size: 30px;
     gap: 7px;
-    margin-left: 30px;
+    margin-left: 10px;
+
 `
 
 const LogoImage = styled.img`
@@ -13,11 +14,12 @@ const LogoImage = styled.img`
 `
 
 const LogoName = styled.p`
-  
+  font-size: 30px;
 `
 
 const Negrito = styled.strong`
   font-weight: bold;
+  font-size: 30px;
 `
 
 

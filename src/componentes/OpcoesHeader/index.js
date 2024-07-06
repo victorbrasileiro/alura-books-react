@@ -13,10 +13,13 @@ const Opcao = styled.li`
     padding-right: 5px;
     cursor: pointer;
     font-size: 16px;
+    margin-left: 20px;
 `
-
 const Opcoes = styled.ul`
   display: flex;
+`
+const OpcaoTexto = styled.p`
+  
 `
 
 function OpcoesHeader() {
@@ -24,9 +27,9 @@ function OpcoesHeader() {
         <Opcoes>
           { textoOpcoes.map( (texto) => ( 
             <Opcao>
-              <p>
+              <OpcaoTexto>
                 {texto}
-              </p>
+              </OpcaoTexto>
             </Opcao>
           ) ) }
         </Opcoes>

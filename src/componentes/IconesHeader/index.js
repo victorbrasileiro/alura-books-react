@@ -3,7 +3,7 @@ import sacola from '../../imagens/sacola.svg';
 import styled from 'styled-components';
 
 const Icone = styled.li`
-  margin-right: 40px;
+  margin-left: 10px;
   align-items: center;
 `
 
@@ -12,14 +12,20 @@ const Icones = styled.ul`
   padding-top: 17px;
 `
 
+const IconeImage = styled.img`
+  
+`
+
 const icones = [perfil, sacola];
 
 function IconesHeader() {
     return (
         <Icones>
           { icones.map( (icone) => (
-            <Icone className='icone'>
-              <img src={icone}></img>
+            <Icone>
+              <IconeImage 
+                src={icone}>
+              </IconeImage>
             </Icone>
           ))}
         </Icones>
@@ -27,3 +33,5 @@ function IconesHeader() {
 }
 
 export default IconesHeader;
+
+//O metodo MAP vai criar uma nova lista dos elementos listados
