@@ -9,8 +9,6 @@ const HeaderContainer = styled.header `
     justify-content: center;
 `
 
-
-
 function Header() {
     return (
       <HeaderContainer>
