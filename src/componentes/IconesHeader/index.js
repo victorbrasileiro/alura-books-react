@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import React from 'react';
 
 const Icone = styled.li`
-  margin-left: 10px;
+  margin-left: 40px;
   align-items: center;
 `
 
