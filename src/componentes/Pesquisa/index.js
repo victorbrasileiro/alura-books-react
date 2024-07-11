@@ -1,6 +1,9 @@
 import React from "react"
 import Input from   '../Input'
 import styled from "styled-components"
+import { useState } from "react"
+import { livros } from './dadosPesquisa'
+
 
 const ContainerPesquisa = styled.section`
         background-image: linear-gradient(90deg, #002F52 35%, #326589 165%);
@@ -23,13 +26,31 @@ const Subtitulo = styled.h3`
 `
 
 function Pesquisa() {
+    //o primeiro estado
+    //o estado é um valor
+    //cria a string padrão e o set é a atualização da string para que seja uma variavel mutável
+    const [livrosPesquisados, setLivrosPesquisados] = useState([])
+
     return (
         <ContainerPesquisa>
             <Titulo>Já sabe por onde começar? </Titulo>
             <Subtitulo>Encontre seu livro em nossa estante. </Subtitulo>
             <Input 
                 placeholder="Escreva sua próxima leitura"
+                onBlur={evento => {
+                    const textoDigitado = evento.target.value
+                    const resultadoPesquisa = livros.filter(livro => livro.nome.includes(textoDigitado))
+                    setLivrosPesquisados(resultadoPesquisa)
+                }}
             />
+            {/* <p>{textoDigitado}</p>  */}
+
+            { livrosPesquisados.map( livro => (
+                <div>
+                    <p>{ livro.nome }</p>
+                    <img src={ livro.src } />
+                </div>                
+            )) }
         </ContainerPesquisa>
     )
 }
