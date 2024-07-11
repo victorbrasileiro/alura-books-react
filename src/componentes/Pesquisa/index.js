@@ -25,6 +25,22 @@ const Subtitulo = styled.h3`
         margin-bottom: 40px;
 `
 
+const ContainerLivrosPesquisados = styled.div `
+        display: grid;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+`
+
+const ResultadoTituloLivro = styled.p `
+        display: flex;
+`
+
+const ImagemLivro = styled.img `
+        display: flex;
+        
+`
+
 function Pesquisa() {
     //o primeiro estado
     //o estado é um valor
@@ -46,10 +62,10 @@ function Pesquisa() {
             {/* <p>{textoDigitado}</p>  */}
 
             { livrosPesquisados.map( livro => (
-                <div>
-                    <p>{ livro.nome }</p>
-                    <img src={ livro.src } />
-                </div>                
+                <ContainerLivrosPesquisados>
+                    <ResultadoTituloLivro>{ livro.nome }</ResultadoTituloLivro>
+                    <ImagemLivro src={ livro.src } />
+                </ContainerLivrosPesquisados>                
             )) }
         </ContainerPesquisa>
     )
