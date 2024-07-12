@@ -27,7 +27,7 @@ const Subtitulo = styled.h3`
 
 const ContainerLivrosPesquisados = styled.div `
         display: flex;
-        flex-direction: row
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         margin-bottom: 20px;
@@ -72,7 +72,7 @@ function Pesquisa() {
                 </ContainerLivrosPesquisados>                
             )) }
         </ContainerPesquisa>
-    )
+    );
 }
 
 export default Pesquisa
