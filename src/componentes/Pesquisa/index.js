@@ -26,20 +26,24 @@ const Subtitulo = styled.h3`
 `
 
 const ContainerLivrosPesquisados = styled.div `
-        display: grid;
-        flex-wrap: wrap;
-        align-items: center;
+        display: flex;
+        flex-direction: row
         justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+        cursor: pointer;
+
+        p {
+            width: 200px;
+        }
+        img {
+            width: 100px;
+        }
+        &:hover {
+            border: 1px solid white;
+        }
 `
 
-const ResultadoTituloLivro = styled.p `
-        display: flex;
-`
-
-const ImagemLivro = styled.img `
-        display: flex;
-        
-`
 
 function Pesquisa() {
     //o primeiro estado
@@ -63,8 +67,8 @@ function Pesquisa() {
 
             { livrosPesquisados.map( livro => (
                 <ContainerLivrosPesquisados>
-                    <ResultadoTituloLivro>{ livro.nome }</ResultadoTituloLivro>
-                    <ImagemLivro src={ livro.src } />
+                    <p>{ livro.nome }</p>
+                    <img src={ livro.src } />
                 </ContainerLivrosPesquisados>                
             )) }
         </ContainerPesquisa>
